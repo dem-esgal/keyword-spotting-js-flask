@@ -18,3 +18,5 @@ So you can say
 
 run main.py to start
 open http://localhost:8081/ ib chrome or firefox
+
+Please change SECRET_KEY in server.cfg
