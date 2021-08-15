@@ -100,9 +100,10 @@ micAudioProcessor.getMicPermission().done(function() {
           } else if (micAudioProcessor.status === 'listen' && micAudioProcessor.getLongBufferLength() > micAudioProcessor.getData().length && command === 'silence') {
             micAudioProcessor.status = 'send';
           }
+
+          updateToggledCommand(command);
       }
       prevCommand = command;
-      updateToggledCommand(command);
     });
   }, predictionFrequency);
 }).fail(function() {
